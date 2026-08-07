@@ -23,3 +23,5 @@ Implemented 5 distinct XSL stylesheets for data presentation and processing:
 
 #### 4. Browser Presentation (`zoo_park.css`)
 * Applied CSS styling directly to XML structures using card layouts, borders, pseudo-elements (`::before`/`::after`), and the `attr()` function to display XML attribute values visually on web pages.
+
+This project was collaboratively developed as a team assignment within the framework of my undergraduate studies at the University of Piraeus.
