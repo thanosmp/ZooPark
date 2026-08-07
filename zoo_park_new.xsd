@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Βασικό στοιχείο zoo_park -->
+  <xs:element name="zoo_park">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="trainer_list" type="trainerListType"/>
+        <xs:element name="animal_classification" type="animalClassificationType"/>
+        <xs:element name="classification" type="classificationType"/>
+        <xs:element name="contact_details" type="contactDetailsType"/>
+        <xs:element name="park_timings" type="parkTimingsType"/>
+        <xs:element name="tickets" type="ticketsType"/>
+        <xs:element name="animal_list" type="animalListType"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="number_of_Animals" type="xs:string" use="required"/>
+      <xs:attribute name="Year_opened" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Λίστα φροντιστών -->
+  <xs:complexType name="trainerListType">
+    <xs:sequence>
+      <xs:element name="trainer" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="trid" type="xs:ID" use="required"/>
+          <xs:attribute name="name" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Κατηγορίες σπονδυλωτών ζώων -->
+  <xs:complexType name="animalClassificationType">
+    <xs:sequence>
+      <xs:element name="classification_type" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="classification_id" type="xs:ID" use="required"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Κατηγορίες με βάση διατροφή και τρόπο γέννησης -->
+  <xs:complexType name="classificationType">
+    <xs:sequence>
+      <xs:element name="class" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Herbivores" type="categoryIdType"/>
+            <xs:element name="Carnivores" type="categoryIdType"/>
+            <xs:element name="Omnivorous" type="categoryIdType"/>
+            <xs:element name="Wallets" type="categoryIdType"/>
+            <xs:element name="Spawning" type="categoryIdType"/>
+            <xs:element name="Superior" type="categoryIdType"/>
+          </xs:choice>
+          <xs:attribute name="class_id" type="xs:ID" use="required"/>
+          <xs:attribute name="value" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Κενά στοιχεία κατηγοριών -->
+  <xs:complexType name="categoryIdType">
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- Στοιχεία επικοινωνίας -->
+  <xs:complexType name="contactDetailsType">
+    <xs:sequence>
+      <xs:element name="address" type="xs:string"/>
+      <xs:element name="tel" type="xs:string"/>
+      <xs:element name="email" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Ωράριο λειτουργίας -->
+  <xs:complexType name="parkTimingsType">
+    <xs:sequence>
+      <xs:element name="Day" maxOccurs="unbounded">
+        <xs:complexType mixed="true">
+          <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Timing" type="xs:string"/>
+          </xs:sequence>
+          <xs:attribute name="day_id" type="xs:ID" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Εισιτήρια -->
+  <xs:complexType name="ticketsType">
+    <xs:sequence>
+      <xs:element name="Weekday_Charges">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="wValue" type="ticketValueType" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Weekend_Holiday_Charges">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="hValue" type="ticketValueType" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Τιμή εισιτηρίου -->
+  <xs:complexType name="ticketValueType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="ticket_category" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Λίστα ζώων -->
+  <xs:complexType name="animalListType">
+    <xs:sequence>
+      <xs:element name="animal" type="animalType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Στοιχεία ζώου -->
+  <xs:complexType name="animalType">
+    <xs:sequence>
+      <xs:element name="animal_names_info" type="animalNamesInfoType"/>
+      <xs:element name="trainers" type="trainersType"/>
+      <xs:element name="quantity" type="xs:string"/>
+      <xs:element name="animal_descr" type="xs:string"/>
+      <xs:element name="animal_characteristics" type="animalCharacteristicsType"/>
+      <xs:element name="show_participation" type="showParticipationType" minOccurs="0"/>
+      <xs:element name="Threats" type="threatsType"/>
+    </xs:sequence>
+    <xs:attribute name="animal_id" type="xs:ID" use="required"/>
+    <xs:attribute name="an_class_id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- Όνομα ζώου και επιστημονική ονομασία -->
+  <xs:complexType name="animalNamesInfoType">
+    <xs:attribute name="animal_name" type="xs:string" use="required"/>
+    <xs:attribute name="scientific_name" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- Φροντιστές ζώου -->
+  <xs:complexType name="trainersType">
+    <xs:attribute name="trainer_id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- Χαρακτηριστικά ζώου -->
+  <xs:complexType name="animalCharacteristicsType">
+    <xs:sequence>
+      <xs:element name="allocation" type="xs:string"/>
+      <xs:element name="weight" type="weightType"/>
+      <xs:element name="habitat" type="xs:string"/>
+      <xs:element name="dimensions" type="dimensionsType"/>
+      <xs:element name="lifetime" type="unitTextType"/>
+      <xs:choice minOccurs="0">
+        <xs:element name="pregnancy" type="unitTextType"/>
+        <xs:element name="incubation" type="unitTextType"/>
+      </xs:choice>
+      <xs:element name="population" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Βάρος -->
+  <xs:complexType name="weightType" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="wmale" type="weightChildType"/>
+      <xs:element name="wfemale" type="weightChildType"/>
+    </xs:choice>
+    <xs:attribute name="unit_weight" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- Βάρος ανά φύλο -->
+  <xs:complexType name="weightChildType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="unit_weight" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Διαστάσεις -->
+  <xs:complexType name="dimensionsType">
+    <xs:sequence>
+      <xs:element name="height" type="dimensionValueType" minOccurs="0"/>
+      <xs:element name="length" type="dimensionValueType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Ύψος ή μήκος -->
+  <xs:complexType name="dimensionValueType" mixed="true">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="female" type="femaleType"/>
+    </xs:sequence>
+    <xs:attribute name="unit" type="xs:string" use="optional"/>
+    <xs:attribute name="max" type="xs:string" use="optional"/>
+    <xs:attribute name="male" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- Τιμή για θηλυκό ζώο -->
+  <xs:complexType name="femaleType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="f_unit_height" type="xs:string" use="optional"/>
+        <xs:attribute name="f_unit_length" type="xs:string" use="optional"/>
+        <xs:attribute name="max" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Κείμενο με μονάδα μέτρησης -->
+  <xs:complexType name="unitTextType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="unit" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- Συμμετοχή σε δραστηριότητες -->
+  <xs:complexType name="showParticipationType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="feeding" type="showType"/>
+      <xs:element name="trainer_speaking" type="showType"/>
+      <xs:element name="show_bird_flight" type="showType"/>
+      <xs:element name="animal_show" type="showType"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <!-- Δομή δραστηριότητας -->
+  <xs:complexType name="showType">
+    <xs:sequence>
+      <xs:element name="duration" type="unitTextType"/>
+      <xs:element name="dates" type="datesType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Ημέρες δραστηριότητας -->
+  <xs:complexType name="datesType">
+    <xs:sequence>
+      <xs:element name="date" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="start_hour" type="xs:string" use="required"/>
+              <xs:attribute name="day_id" type="xs:string" use="required"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Απειλές -->
+  <xs:complexType name="threatsType">
+    <xs:sequence>
+      <xs:element name="threat" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="threat_id" type="xs:string" use="required"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="IUCN" type="xs:string" use="required"/>
+    <xs:attribute name="indicat_threat" type="xs:string" use="required"/>
+  </xs:complexType>
+
+</xs:schema>

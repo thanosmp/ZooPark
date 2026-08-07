@@ -1,0 +1,154 @@
+<!ELEMENT zoo_park (trainer_list, animal_classification, classification, contact_details, park_timings, tickets, animal_list)>
+<!ATTLIST zoo_park
+    name CDATA #REQUIRED
+    number_of_Animals CDATA #REQUIRED
+    Year_opened CDATA #REQUIRED>
+
+<!--Λίστα φροντιστών-->
+<!ELEMENT trainer_list (trainer+)>
+<!ELEMENT trainer EMPTY>
+<!ATTLIST trainer 
+    trid ID #REQUIRED
+    name CDATA #REQUIRED>
+
+<!--Κατηγοριοποίηση ζώων-->
+<!ELEMENT animal_classification (classification_type+)>
+<!ELEMENT classification_type (#PCDATA)>
+<!ATTLIST classification_type 
+    classification_id ID #REQUIRED>
+
+<!--Κατηγοριοποίηση ζώων με βάση τη διατροφή και τα μικρά-->
+<!ELEMENT classification (class+)>
+<!ELEMENT class ((Herbivores | Carnivores | Omnivorous | Wallets | Spawning | Superior)*)>
+<!ATTLIST class
+    class_id ID #REQUIRED
+    value CDATA #REQUIRED>
+
+<!--Καθορισμός id κατηγοριών-->
+<!ELEMENT Herbivores EMPTY>
+<!ATTLIST Herbivores id CDATA #REQUIRED>
+<!ELEMENT Carnivores EMPTY>
+<!ATTLIST Carnivores id CDATA #REQUIRED>
+<!ELEMENT Omnivorous EMPTY>
+<!ATTLIST Omnivorous id CDATA #REQUIRED>
+<!ELEMENT Wallets EMPTY>
+<!ATTLIST Wallets id CDATA #REQUIRED>
+<!ELEMENT Spawning EMPTY>
+<!ATTLIST Spawning id CDATA #REQUIRED>
+<!ELEMENT Superior EMPTY>
+<!ATTLIST Superior id CDATA #REQUIRED>
+
+<!--Στοιχεία επικοινωνίας κήπου-->
+<!ELEMENT contact_details (address, tel, email)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ELEMENT park_timings (Day+)>
+<!ELEMENT Day (#PCDATA | Timing)*>
+<!ATTLIST Day 
+    day_id ID #REQUIRED>
+<!ELEMENT Timing (#PCDATA)>
+
+<!ELEMENT tickets (Weekday_Charges, Weekend_Holiday_Charges)>
+<!ELEMENT Weekday_Charges (wValue+)>
+<!ELEMENT wValue (#PCDATA)>
+<!ATTLIST wValue
+    ticket_category CDATA #REQUIRED
+    unit CDATA #REQUIRED>
+<!ELEMENT Weekend_Holiday_Charges (hValue+)>
+<!ELEMENT hValue (#PCDATA)>
+<!ATTLIST hValue
+    ticket_category CDATA #REQUIRED
+    unit CDATA #REQUIRED>
+
+<!ELEMENT animal_list (animal+)>
+
+<!ELEMENT animal (animal_names_info, trainers, quantity, animal_descr, animal_characteristics, show_participation?, Threats)>
+<!ATTLIST animal
+    animal_id ID #REQUIRED
+    an_class_id CDATA #REQUIRED>
+
+<!ELEMENT animal_names_info EMPTY>
+
+<!ATTLIST animal_names_info
+    animal_name CDATA #REQUIRED
+    scientific_name CDATA #IMPLIED>
+    
+<!ELEMENT trainers EMPTY>
+<!ATTLIST trainers 
+    trainer_id CDATA #REQUIRED>
+
+<!ELEMENT quantity (#PCDATA)>
+
+<!ELEMENT animal_descr (#PCDATA)>
+
+<!ELEMENT animal_characteristics (allocation, weight, habitat, dimensions, lifetime, (pregnancy | incubation)?, population)>
+<!ELEMENT allocation (#PCDATA)>
+
+<!ELEMENT weight (#PCDATA | wmale | wfemale)*>
+<!ATTLIST weight 
+    unit_weight CDATA #IMPLIED>
+<!ELEMENT wmale (#PCDATA)>
+<!ATTLIST wmale 
+    unit_weight CDATA #REQUIRED>
+<!ELEMENT wfemale (#PCDATA)>
+<!ATTLIST wfemale 
+    unit_weight CDATA #REQUIRED>
+
+<!ELEMENT habitat (#PCDATA)>
+
+<!ELEMENT dimensions (height?, length?)>
+<!ELEMENT height (#PCDATA | female)*>
+<!ATTLIST height
+    unit CDATA #IMPLIED
+    max CDATA #IMPLIED
+    male CDATA #IMPLIED>
+<!ELEMENT length (#PCDATA | female)*>
+<!ATTLIST length
+    unit CDATA #IMPLIED
+    max CDATA #IMPLIED
+    male CDATA #IMPLIED>
+<!ELEMENT female (#PCDATA)>
+<!ATTLIST female
+    f_unit_height CDATA #IMPLIED
+    f_unit_length CDATA #IMPLIED
+    max CDATA #IMPLIED>
+
+<!ELEMENT lifetime (#PCDATA)>
+<!ATTLIST lifetime 
+    unit CDATA #REQUIRED>
+
+<!ELEMENT pregnancy (#PCDATA)>
+<!ATTLIST pregnancy 
+    unit CDATA #REQUIRED>
+
+<!ELEMENT incubation (#PCDATA)>
+<!ATTLIST incubation 
+    unit CDATA #REQUIRED>
+
+<!ELEMENT population (#PCDATA)>
+
+<!ELEMENT show_participation ((feeding | trainer_speaking | show_bird_flight | animal_show)*)>
+<!ELEMENT feeding (duration, dates)>
+<!ELEMENT trainer_speaking (duration, dates)>
+<!ELEMENT show_bird_flight (duration, dates)>
+<!ELEMENT animal_show (duration, dates)>
+
+<!ELEMENT duration (#PCDATA)>
+<!ATTLIST duration 
+    unit CDATA #REQUIRED>
+
+<!ELEMENT dates (date+)>
+<!ELEMENT date (#PCDATA)>
+<!ATTLIST date
+    start_hour CDATA #REQUIRED
+    day_id CDATA #REQUIRED>
+
+<!ELEMENT Threats (threat+)>
+<!ATTLIST Threats
+    IUCN CDATA #REQUIRED
+    indicat_threat CDATA #REQUIRED>
+<!ELEMENT threat (#PCDATA)>
+<!ATTLIST threat 
+    threat_id CDATA #REQUIRED>

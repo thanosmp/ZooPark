@@ -1,0 +1,213 @@
+<!-- Ρίζα του εγγράφου: Στοιχεία του ζωολογικού κήπου -->
+<!ELEMENT zoo_park (trainer_list, animal_classification, classification, contact_details, park_timings, tickets, animal_list)>
+<!ATTLIST zoo_park
+    name CDATA #REQUIRED
+    number_of_Animals CDATA #REQUIRED
+    Year_opened CDATA #REQUIRED>
+
+<!-- Λίστα φροντιστών -->
+<!ELEMENT trainer_list (trainer+)>
+<!ELEMENT trainer (#PCDATA)>
+<!ATTLIST trainer 
+    id ID #REQUIRED>
+
+<!-- Κατηγοριοποίηση ζώων -->
+<!ELEMENT animal_classification (classification_type+)>
+<!ELEMENT classification_type (#PCDATA)>
+<!ATTLIST classification_type 
+    id ID #REQUIRED>
+
+<!-- Κατηγοριοποίηση ζώων με βάση τη διατροφή και τα μικρά -->
+<!ELEMENT classification (class+)>
+<!ATTLIST classification
+    class_id CDATA #REQUIRED
+    value CDATA #REQUIRED>
+    
+<!ELEMENT class ((Herbivores | Carnivores | Omnivorous | Wallets | Spawning | Superior)*)>
+<!ATTLIST class
+    class_id ID #REQUIRED
+    value CDATA #REQUIRED>
+    
+<!-- Καθορισμός id κατηγοριών -->
+<!ELEMENT Herbivores EMPTY>
+<!ATTLIST Herbivores id CDATA #REQUIRED>
+<!ELEMENT Carnivores EMPTY>
+<!ATTLIST Carnivores id CDATA #REQUIRED>
+<!ELEMENT Omnivorous EMPTY>
+<!ATTLIST Omnivorous id CDATA #REQUIRED>
+<!ELEMENT Wallets EMPTY>
+<!ATTLIST Wallets id CDATA #REQUIRED>
+<!ELEMENT Spawning EMPTY>
+<!ATTLIST Spawning id CDATA #REQUIRED>
+<!ELEMENT Superior EMPTY>
+<!ATTLIST Superior id CDATA #REQUIRED>
+
+<!-- Στοιχεία επικοινωνίας κήπου -->
+<!ELEMENT contact_details (address, tel, email)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!-- Ωράριο λειτουργίας πάρκου -->
+<!ELEMENT park_timings (day+)>
+<!ELEMENT day (#PCDATA | timing)*>
+<!ATTLIST day
+    day_id ID #REQUIRED>
+<!ELEMENT timing (#PCDATA)>
+
+<!-- Πληροφορίες εισιτηρίων και χρεώσεων -->
+<!ELEMENT tickets (weekday_charges, weekend_holidays_charges)>
+<!ELEMENT weekday_charges (w_value*)>
+<!ELEMENT w_value (#PCDATA)>
+<!ATTLIST w_value
+    w_unit CDATA #REQUIRED
+    w_ticket_category CDATA #REQUIRED>
+<!ELEMENT weekend_holidays_charges (h_value*)>
+<!ELEMENT h_value (#PCDATA)>
+<!ATTLIST h_value
+    h_unit CDATA #REQUIRED
+    h_ticket_category CDATA #REQUIRED>
+
+<!-- Λίστα των ζώων του κήπου -->
+<!ELEMENT animal_list (animal+)>
+<!ELEMENT animal (animal_names_info, trainers, quantity, animal_descr, animal_characteristics, show_participation?, Threats, additional_info)>
+<!ATTLIST animal
+    animal_id ID #REQUIRED
+    an_class_id IDREFS #REQUIRED>
+
+<!-- Ονόματα και ταυτοποίηση ζώου -->
+<!ELEMENT animal_names_info EMPTY>
+<!ATTLIST animal_names_info
+    animal_name CDATA #REQUIRED
+    scientific_name CDATA #IMPLIED>
+
+<!-- Σχετιζόμενοι φροντιστές -->
+<!ELEMENT trainers EMPTY>
+<!ATTLIST trainers
+    trainer_id IDREFS #REQUIRED>
+
+<!-- Πληθυσμιακά στοιχεία εντός του κήπου -->
+<!ELEMENT quantity (#PCDATA)>
+
+<!-- Περιγραφή του ζώου -->
+<!ELEMENT animal_descr (#PCDATA)>
+
+<!-- Βιολογικά χαρακτηριστικά του ζώου -->
+<!ELEMENT animal_characteristics (allocation?, weight, habitat, dimensions, lifetime, (pregnancy | incubation), population?)>
+<!ELEMENT allocation (#PCDATA)>
+<!ELEMENT weight (wmale | wfemale)*>
+<!ELEMENT wmale (#PCDATA)>
+<!ATTLIST wmale 
+    unit_weight CDATA #REQUIRED>
+<!ELEMENT wfemale (#PCDATA)>
+<!ATTLIST wfemale 
+    unit_weight CDATA #REQUIRED>
+
+<!ELEMENT habitat (#PCDATA)>
+
+<!-- Διαστάσεις (Ύψος και Μήκος) -->
+<!ELEMENT dimensions (height?, length?)>
+<!ELEMENT height (#PCDATA | female)*>
+<!ATTLIST height
+    unit CDATA #IMPLIED
+    max CDATA #IMPLIED
+    male CDATA #IMPLIED>
+<!ELEMENT length (#PCDATA | female)*>
+<!ATTLIST length
+    unit CDATA #IMPLIED
+    max CDATA #IMPLIED
+    male CDATA #IMPLIED>
+<!ELEMENT female (#PCDATA)>
+<!ATTLIST female
+    f_unit_height CDATA #IMPLIED
+    f_unit_length CDATA #IMPLIED
+    max CDATA #IMPLIED>
+
+<!-- Προσδόκιμο ζωής και αναπαραγωγή -->
+<!ELEMENT lifetime (#PCDATA)>
+<!ATTLIST lifetime 
+    unit CDATA #REQUIRED>
+
+<!ELEMENT pregnancy (#PCDATA)>
+<!ATTLIST pregnancy 
+    unit CDATA #REQUIRED>
+
+<!ELEMENT incubation (#PCDATA)>
+<!ATTLIST incubation 
+    unit CDATA #REQUIRED>
+
+<!ELEMENT population (#PCDATA)>
+
+<!-- Συμμετοχή σε εκδηλώσεις και θεάματα -->
+<!ELEMENT show_participation ((feeding | trainer_speaking | show_bird_flight | animal_show)*)>
+<!ELEMENT feeding (duration, dates)>
+<!ELEMENT trainer_speaking (duration, dates)>
+<!-- Διάρκεια και ημερομηνίες εκδηλώσεων -->
+<!ELEMENT show_bird_flight (duration, dates)>
+<!ELEMENT animal_show (duration, dates)>
+
+<!ELEMENT duration (#PCDATA)>
+<!ATTLIST duration
+    unit CDATA #REQUIRED>
+
+<!ELEMENT dates (date*)>
+<!ELEMENT date (#PCDATA)>
+<!ATTLIST date
+    start_hour CDATA #REQUIRED
+    day_id IDREF #REQUIRED>
+
+<!-- Απειλές και κατάσταση διατήρησης (IUCN) -->
+<!ELEMENT Threats (threat*)>
+<!ATTLIST Threats
+    IUCN CDATA #REQUIRED
+    indicat_threat CDATA #REQUIRED>
+<!ELEMENT threat (#PCDATA)>
+<!ATTLIST threat
+    threat_id CDATA #REQUIRED>
+
+<!-- Πρόσθετες πληροφορίες και διαδραστικότητα -->
+<!ELEMENT additional_info (trainer_accreditation, adoption_program?, animal_image, special_diet?, votes)>
+
+<!-- Πιστοποίηση φροντιστών -->
+<!ELEMENT trainer_accreditation EMPTY>
+<!ATTLIST trainer_accreditation
+    is_accredited (yes | no) #REQUIRED
+    accredited_trainers IDREFS #IMPLIED>
+
+<!-- Πρόγραμμα υιοθεσίας ζώου -->
+<!ELEMENT adoption_program (gift_ticket?)>
+<!ATTLIST adoption_program
+    amount CDATA #REQUIRED
+    currency CDATA #FIXED "EUR"
+    subscription_type (annual | semi-annual) #REQUIRED>
+<!ELEMENT gift_ticket (#PCDATA)>
+
+<!-- Φωτογραφικό υλικό -->
+<!-- Φωτογραφικό υλικό -->
+<!ELEMENT animal_image EMPTY>
+<!ATTLIST animal_image
+    url CDATA #REQUIRED
+    type (jpg | png | gif) #REQUIRED>
+
+<!-- Ειδική διατροφή ή φαρμακευτική αγωγή -->
+<!ELEMENT special_diet (diet_item+)>
+<!ELEMENT diet_item (#PCDATA)>
+<!ATTLIST diet_item
+    item_type (food | medicine) #REQUIRED>
+
+<!-- Αξιολογήσεις και ψηφοφορία κοινού -->
+<!ELEMENT votes (vote*)>
+<!ELEMENT vote (#PCDATA)>
+<!ATTLIST vote
+    username CDATA #REQUIRED
+    stars (1 | 2 | 3 | 4 | 5) #REQUIRED>
+
+
+
+
+
+
+
+
+
+    

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zoo_park SYSTEM "zoo_park_new2.dtd">
+<zoo_park name="WILDLIFE XYZ PARK" number_of_Animals="2000" Year_opened="2000">
+    
+    <trainer_list>
+        <trainer id="T1">George Papadopoulos</trainer>
+        <trainer id="T2">Giannis Nemeas</trainer>
+        <trainer id="T3">Tzina Eleftheriou</trainer>
+        <trainer id="T4">Giorgos Emmanoyilidis</trainer>
+        <trainer id="T5">Rafail Psandimon</trainer>
+        <trainer id="T6">Maria Popova</trainer>
+        <trainer id="T7">Tom Trandon</trainer>
+        <trainer id="T8">Jim Paraskevoglou</trainer>
+        <trainer id="T9">Chris Boris</trainer>
+        <trainer id="T10">Nantia Trejova</trainer>
+        <trainer id="T11">Havie Limon</trainer>
+        <trainer id="T12">Eva Lampanova</trainer>
+    </trainer_list>
+
+    <animal_classification>
+        <classification_type id="K1">Αμφίβια</classification_type>
+        <classification_type id="K2">Ερπετά</classification_type>
+        <classification_type id="K3">Πτηνά</classification_type>
+        <classification_type id="K4">Ψάρια</classification_type>
+        <classification_type id="K5">Θηλαστικά</classification_type>
+    </animal_classification>
+
+    <classification value="ανάλογα με την τροφή" class_id="CLASS_LIST_1">
+        <class class_id="C1" value="Φυτοφάγα"/>
+        <class class_id="C2" value="Σαρκοφάγα"/>
+        <class class_id="C3" value="Παμφάγα"/>
+    </classification>
+
+    <contact_details>
+        <address>Θέση Γιαλού, Σπάτα 19004</address>
+        <tel>2106634724</tel>
+        <email>info@atticapark.gr</email>
+    </contact_details>
+
+    <park_timings>
+        <day day_id="D_WEEK">Καθημερινές<timing>09:00 - 18:30</timing></day>
+        <day day_id="D_END">Σαββατοκύριακα<timing>09:00 - 20:00</timing></day>
+    </park_timings>
+
+    <tickets>
+        <weekday_charges>
+            <w_value w_unit="EUR" w_ticket_category="Adult">18</w_value>
+            <w_value w_unit="EUR" w_ticket_category="Child">14</w_value>
+        </weekday_charges>
+        <weekend_holidays_charges>
+            <h_value h_unit="EUR" h_ticket_category="Adult">20</h_value>
+            <h_value h_unit="EUR" h_ticket_category="Child">15</h_value>
+        </weekend_holidays_charges>
+    </tickets>
+
+    <animal_list>
+
+        <animal animal_id="A01" an_class_id="K5 C2">
+            <animal_names_info animal_name="Λιοντάρι" scientific_name="Panthera leo"/>
+            <trainers trainer_id="T1"/>
+            <quantity>4</quantity>
+            <animal_descr>Το λιοντάρι είναι ένα μεγάλο σαρκοφάγο θηλαστικό της οικογένειας των αιλουριδών.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">190</wmale><wfemale unit_weight="kg">130</wfemale></weight>
+                <habitat>Σαβάνα και ανοιχτές εκτάσεις</habitat>
+                <dimensions><height unit="m" max="1.2"/></dimensions>
+                <lifetime unit="years">14</lifetime>
+                <pregnancy unit="months">4</pregnancy>
+            </animal_characteristics>
+            <Threats IUCN="Τρωτό" indicat_threat="5">
+                <threat threat_id="TH_HUNT">Λαθροθηρία</threat>
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T1"/>
+                <adoption_program amount="100" subscription_type="annual">
+                    <gift_ticket>Εισιτήριο Δώρο για 1 Έτος</gift_ticket>
+                </adoption_program>
+                <animal_image url="images/lion.jpg" type="jpg"/>
+                <special_diet>
+                    <diet_item item_type="food">Φρέσκο βόειο κρέας</diet_item>
+                </special_diet>
+                <votes>
+                    <vote username="eleni_98" stars="5">Βασιλιάς του πάρκου!</vote>
+                </votes>
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A02" an_class_id="K5 C1">
+            <animal_names_info animal_name="Ασιατικός Ελέφαντας" scientific_name="Elephas maximus"/>
+            <trainers trainer_id="T3 T4"/>
+            <quantity>2</quantity>
+            <animal_descr>Ο ελέφαντας είναι το μεγαλύτερο χερσαίο θηλαστικό στην Ασία.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">4000</wmale></weight>
+                <habitat>Τροπικά δάση και θαμνώδεις εκτάσεις</habitat>
+                <dimensions><height unit="m" max="3.0"/></dimensions>
+                <lifetime unit="years">60</lifetime>
+                <pregnancy unit="months">22</pregnancy>
+            </animal_characteristics>
+            <Threats IUCN="Κινδυνεύον" indicat_threat="7">
+                <threat threat_id="TH_HAB">Απώλεια Βιότοπου</threat>
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T3 T4"/>
+                <adoption_program amount="150" subscription_type="annual">
+                    <gift_ticket>Ετήσιο πάσο υιοθέτη</gift_ticket>
+                </adoption_program>
+                <animal_image url="images/elephant.jpg" type="jpg"/>
+                <votes>
+                    <vote username="nikos_p" stars="5">Πολύ έξυπνο ζώο.</vote>
+                </votes>
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A03" an_class_id="K5 C2">
+            <animal_names_info animal_name="Τσίτα" scientific_name="Acinonyx jubatus"/>
+            <trainers trainer_id="T1 T5"/>
+            <quantity>3</quantity>
+            <animal_descr>Το ταχύτερο χερσαίο ζώο στον πλανήτη.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">55</wmale></weight>
+                <habitat>Ανοιχτές σαβάνες</habitat>
+                <dimensions><length unit="m" max="1.3"/></dimensions>
+                <lifetime unit="years">12</lifetime>
+                <pregnancy unit="days">93</pregnancy>
+            </animal_characteristics>
+            <Threats IUCN="Τρωτό" indicat_threat="5">
+                <threat threat_id="TH_GEN">Μειωμένη γενετική ποικιλότητα</threat>
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T1 T5"/>
+                <animal_image url="images/cheetah.png" type="png"/>
+                <special_diet>
+                    <diet_item item_type="medicine">Βιταμίνες για αρθρώσεις</diet_item>
+                </special_diet>
+                <votes>
+                    <vote username="speedy" stars="4">Απίστευτη ταχύτητα!</vote>
+                </votes>
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A04" an_class_id="K5 C2">
+            <animal_names_info animal_name="Ρινοδέλφινο" scientific_name="Tursiops truncatus"/>
+            <trainers trainer_id="T6 T7"/>
+            <quantity>6</quantity>
+            <animal_descr>Θαλάσσιο θηλαστικό με εξαιρετική ευφυΐα και κοινωνικότητα.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">300</wmale></weight>
+                <habitat>Παράκτιες και ανοιχτές θάλασσες</habitat>
+                <dimensions><length unit="m" max="3.5"/></dimensions>
+                <lifetime unit="years">40</lifetime>
+                <pregnancy unit="months">12</pregnancy>
+            </animal_characteristics>
+            <Threats IUCN="Μειωμένου Ενδιαφέροντος" indicat_threat="2">
+                <threat threat_id="TH_NET">Παγίδευση σε δίχτυα</threat>
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T6 T7"/>
+                <adoption_program amount="80" subscription_type="semi-annual"/>
+                <animal_image url="images/dolphin.jpg" type="jpg"/>
+                <votes>
+                    <vote username="marina" stars="5">Η παρουσίασή τους ήταν μαγική!</vote>
+                </votes>
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A05" an_class_id="K5 C1">
+            <animal_names_info animal_name="Καμηλοπάρδαλη" scientific_name="Giraffa camelopardalis"/>
+            <trainers trainer_id="T4"/>
+            <quantity>5</quantity>
+            <animal_descr>Το ψηλότερο ζώο της ξηράς με χαρακτηριστικό μακρύ λαιμό.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">1200</wmale></weight>
+                <habitat>Ξηρές σαβάνες</habitat>
+                <dimensions><height unit="m" max="5.5"/></dimensions>
+                <lifetime unit="years">25</lifetime>
+                <pregnancy unit="months">15</pregnancy>
+            </animal_characteristics>
+            <Threats IUCN="Τρωτό" indicat_threat="4">
+                <threat threat_id="TH_HAB">Απώλεια Βιότοπου</threat> <!-- ΔΙΟΡΘΩΘΗΚΕ: Προστέθηκε κείμενο και κλείσιμο tag -->
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T4"/> <!-- ΔΙΟΡΘΩΘΗΚΕ: T4 αντί για T2 για συνέπεια -->
+                <animal_image url="images/giraffe.jpg" type="jpg"/>
+                <votes/>
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A06" an_class_id="K5 C3">
+            <animal_names_info animal_name="Κόκκινο Πάντα" scientific_name="Ailurus fulgens"/>
+            <trainers trainer_id="T8"/>
+            <quantity>2</quantity>
+            <animal_descr>Μικρό δενδρόβιο θηλαστικό των Ιμαλαΐων.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">5</wmale></weight>
+                <habitat>Δάση μπαμπού</habitat>
+                <dimensions><length unit="m" max="0.6"/></dimensions>
+                <lifetime unit="years">10</lifetime>
+                <pregnancy unit="days">135</pregnancy>
+            </animal_characteristics>
+            <Threats IUCN="Κινδυνεύον" indicat_threat="8">
+                <threat threat_id="TH_DEF">Αποψίλωση δασών</threat>
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T8"/>
+                <adoption_program amount="120" subscription_type="annual">
+                    <gift_ticket>Δωρεάν είσοδος</gift_ticket>
+                </adoption_program>
+                <animal_image url="images/red_panda.gif" type="gif"/>
+                <special_diet>
+                    <diet_item item_type="food">Φρέσκοι βλαστοί μπαμπού</diet_item>
+                </special_diet>
+                <votes>
+                    <vote username="cute_animals" stars="5">Το πιο γλυκό ζώο του πάρκου!</vote>
+                </votes>
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A07" an_class_id="K3 C1">
+            <animal_names_info animal_name="Μεγάλο Φλαμίνγκο" scientific_name="Phoenicopterus roseus"/>
+            <trainers trainer_id="T9"/>
+            <quantity>25</quantity>
+            <animal_descr>Πτηνό με χαρακτηριστικό ροζ φτέρωμα και μακριά πόδια.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">3.5</wmale></weight>
+                <habitat>Υγρότοποι και αλμυρές λίμνες</habitat>
+                <dimensions><height unit="m" max="1.4"/></dimensions>
+                <lifetime unit="years">30</lifetime>
+                <incubation unit="days">30</incubation>
+            </animal_characteristics>
+            <Threats IUCN="Μειωμένου Ενδιαφέροντος" indicat_threat="2">
+                <threat threat_id="TH_POLL">Μόλυνση υδάτων</threat>
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="no"/>
+                <animal_image url="images/flamingo.jpg" type="jpg"/>
+                <votes/>
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A08" an_class_id="K2 C2">
+            <animal_names_info animal_name="Βασιλικός Πύθωνας" scientific_name="Python regius"/>
+            <trainers trainer_id="T10"/>
+            <quantity>2</quantity>
+            <animal_descr>Μη δηλητηριώδες φίδι που κουλουριάζεται σαν μπάλα όταν απειλείται.</animal_descr>
+            <animal_characteristics>
+                <weight><wfemale unit_weight="kg">1.5</wfemale></weight>
+                <habitat>Αφρικανικές σαβάνες και δάση</habitat>
+                <dimensions><length unit="m" max="1.5"/></dimensions>
+                <lifetime unit="years">20</lifetime>
+                <incubation unit="days">60</incubation>
+            </animal_characteristics>
+            <Threats IUCN="Σχεδόν_Απειλούμενο" indicat_threat="3">
+                <threat threat_id="TH_TRADE">Εμπόριο κατοικίδιων</threat>
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T10"/>
+                <animal_image url="images/python.jpg" type="jpg"/>
+                <votes>
+                    <vote username="reptile_fan" stars="4">Πολύ ήσυχο φίδι.</vote>
+                </votes>
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A09" an_class_id="K4 C2">
+            <animal_names_info animal_name="Μεγάλος Λευκός Καρχαρίας" scientific_name="Carcharodon carcharias"/>
+            <trainers trainer_id="T11"/>
+            <quantity>1</quantity>
+            <animal_descr>Κορυφαίος θηρευτής των ωκεανών.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">1100</wmale></weight>
+                <habitat>Εύκρατα παράκτια ύδατα</habitat>
+                <dimensions><length unit="m" max="4.5"/></dimensions>
+                <lifetime unit="years">70</lifetime>
+                <pregnancy unit="months">12</pregnancy> <!-- ΠΡΟΣΘΗΚΗ: Για να είναι έγκυρο με βάση το DTD -->
+            </animal_characteristics>
+            <Threats IUCN="Τρωτό" indicat_threat="6">
+                <threat threat_id="TH_HUNT">Υπεραλίευση και Λαθροθηρία</threat> <!-- ΔΙΟΡΘΩΘΗΚΕ: Προστέθηκε κείμενο -->
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T11"/>
+                <animal_image url="images/shark.png" type="png"/>
+                <votes/> <!-- ΔΙΟΡΘΩΘΗΚΕ: Έγινε short tag <votes/> -->
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A10" an_class_id="K5 C3">
+            <animal_names_info animal_name="Καφέ αρκούδα" scientific_name="Ursus arctos arctos"/>
+            <trainers trainer_id="T2"/>
+            <quantity>2</quantity>
+            <animal_descr>Μεγάλο παμφάγο θηλαστικό με έντονη παρουσία και στην Ελλάδα.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">265</wmale></weight>
+                <habitat>Ευρώπη και Δ. Ρωσία</habitat>
+                <dimensions><length unit="m" max="2.0"/></dimensions>
+                <lifetime unit="years">25</lifetime>
+                <pregnancy unit="months">8</pregnancy>
+            </animal_characteristics>
+            <Threats IUCN="Μειωμένου Ενδιαφέροντος" indicat_threat="3">
+                <threat threat_id="TH_HAB"/>
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T2"/>
+                <adoption_program amount="110" subscription_type="annual">
+                    <gift_ticket>Δωρεάν πρόσκληση στη γιορτή του πάρκου</gift_ticket>
+                </adoption_program>
+                <animal_image url="images/bear.jpg" type="jpg"/>
+                <special_diet>
+                    <diet_item item_type="food">Φρέσκο μέλι και σολομός</diet_item>
+                </special_diet>
+                <votes>
+                    <vote username="forest_king" stars="5">Πολύ επιβλητική!</vote>
+                </votes>
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A11" an_class_id="K5 C3">
+            <animal_names_info animal_name="Χιμπαντζής" scientific_name="Pan troglodytes"/>
+            <trainers trainer_id="T12"/>
+            <quantity>4</quantity>
+            <animal_descr>Ο στενότερος γενετικός συγγενής του ανθρώπου στο ζωικό βασίλειο.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">50</wmale></weight>
+                <habitat>Τροπικά δάση Αφρικής</habitat>
+                <dimensions><height unit="m" max="1.3"/></dimensions>
+                <lifetime unit="years">45</lifetime>
+                <pregnancy unit="months">8</pregnancy>
+            </animal_characteristics>
+            <Threats IUCN="Κινδυνεύον" indicat_threat="7">
+                <threat threat_id="TH_HAB"/>
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T12"/>
+                <animal_image url="images/chimp.jpg" type="jpg"/>
+                <votes>
+                    <vote username="humanoid" stars="5">Πολύ αστείοι και πανέξυπνοι!</vote>
+                </votes>
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A12" an_class_id="K3 C2">
+            <animal_names_info animal_name="Αυτοκρατορικός Πιγκουίνος" scientific_name="Aptenodytes forsteri"/>
+            <trainers trainer_id="T9 T12"/>
+            <quantity>8</quantity>
+            <animal_descr>Το μεγαλύτερο σε μέγεθος είδος πιγκουίνου στον κόσμο.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">35</wmale></weight>
+                <habitat>Ανταρκτική</habitat>
+                <dimensions><height unit="m" max="1.1"/></dimensions>
+                <lifetime unit="years">20</lifetime>
+                <incubation unit="days">64</incubation>
+            </animal_characteristics>
+            <Threats IUCN="Σχεδόν_Απειλούμενο" indicat_threat="4">
+                <threat threat_id="TH_CO2">Λιώσιμο των πάγων</threat>
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T9 T12"/>
+                <adoption_program amount="60" subscription_type="semi-annual"/>
+                <animal_image url="images/penguin.png" type="png"/>
+                <votes/> <!-- ΔΙΟΡΘΩΘΗΚΕ: Έγινε κλειστό tag <votes/> -->
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A13" an_class_id="K3 C1">
+            <animal_names_info animal_name="Κόκκινος Μακάο" scientific_name="Ara macao"/>
+            <trainers trainer_id="T9"/>
+            <quantity>6</quantity>
+            <animal_descr>Μεγάλος παπαγάλος της Νότιας Αμερικής με εντυπωσιακά χρώματα.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">1</wmale></weight>
+                <habitat>Τροπικά δάση του Αμαζονίου</habitat>
+                <dimensions><length unit="m" max="0.9"/></dimensions>
+                <lifetime unit="years">50</lifetime>
+                <incubation unit="days">28</incubation>
+            </animal_characteristics>
+            <Threats IUCN="Μειωμένου Ενδιαφέροντος" indicat_threat="2">
+                <threat threat_id="TH_TRADE"/>
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="no"/>
+                <animal_image url="images/macao.jpg" type="jpg"/>
+                <votes>
+                    <vote username="bird_watcher" stars="5">Υπέροχα χρώματα!</vote>
+                </votes>
+            </additional_info>
+        </animal>
+
+        <animal animal_id="A14" an_class_id="K5 C3">
+            <animal_names_info animal_name="Δακτυλιοφόρος Λεμούριος" scientific_name="Lemur catta"/>
+            <trainers trainer_id="T5"/>
+            <quantity>5</quantity>
+            <animal_descr>Ενδημικό θηλαστικό της Μαδαγασκάρης με ριγωτή ουρά.</animal_descr>
+            <animal_characteristics>
+                <weight><wmale unit_weight="kg">2.2</wmale></weight>
+                <habitat>Φρυγανότοποι και δάση Μαδαγασκάρης</habitat>
+                <dimensions><length unit="m" max="0.45"/></dimensions>
+                <lifetime unit="years">16</lifetime>
+                <pregnancy unit="days">135</pregnancy>
+                <population>2000</population> <!-- ΠΡΟΣΘΗΚΗ: Για να λειτουργήσει σωστά η ταξινόμηση στο XSLT -->
+            </animal_characteristics>
+            <Threats IUCN="Κινδυνεύον" indicat_threat="8">
+                <threat threat_id="TH_HAB">Καταστροφή Δασών και Απώλεια Βιότοπου</threat> <!-- ΔΙΟΡΘΩΘΗΚΕ: Προστέθηκε κείμενο -->
+            </Threats>
+            <additional_info>
+                <trainer_accreditation is_accredited="yes" accredited_trainers="T5"/>
+                <adoption_program amount="90" subscription_type="annual">
+                    <gift_ticket>Δωρεάν αναμνηστικό λούτρινο</gift_ticket>
+                </adoption_program>
+                <animal_image url="images/lemur.jpg" type="jpg"/>
+                <special_diet>
+                    <diet_item item_type="food">Φρέσκα σύκα και φύλλα</diet_item>
+                </special_diet>
+                <votes>
+                    <vote username="madagascar_fan" stars="5">Πολύ κοινωνικοί!</vote>
+                </votes>
+            </additional_info>
+        </animal>
+
+    </animal_list>
+</zoo_park>

@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zoo_park SYSTEM "zoo_park_new.dtd">
+<?xml-stylesheet type="text/xsl" href="present1.xsl"?>
+
+<zoo_park name="WILDLIFE XYZ PARK" number_of_Animals="2000" Year_opened="2000">
+
+    <trainer_list>
+        <trainer trid="T1" name="George Papadopoulos"/>
+        <trainer trid="T2" name="Giannis Nemeas"/>
+        <trainer trid="T3" name="Tzina Eleftheriou"/>
+        <trainer trid="T4" name="Giorgos Emmanoyilidis"/>
+        <trainer trid="T5" name="Rafail Psandimon"/>
+        <trainer trid="T6" name="Maria Popova"/>
+        <trainer trid="T7" name="Tom Trandon"/>
+        <trainer trid="T8" name="Jim Paraskevoglou"/>
+        <trainer trid="T9" name="Chris Boris"/>
+        <trainer trid="T10" name="Nantia Trejova"/>
+        <trainer trid="T11" name="Havie Limon"/>
+        <trainer trid="T12" name="Eva Lampanova"/>
+    </trainer_list>
+
+    <animal_classification>
+        <classification_type classification_id="K1">Αμφίβια</classification_type>
+        <classification_type classification_id="K2">Ερπετά</classification_type>
+        <classification_type classification_id="K3">Πτηνά</classification_type>
+        <classification_type classification_id="K4">Ψάρια</classification_type>
+        <classification_type classification_id="K5">Θηλαστικά</classification_type>
+    </animal_classification>
+
+    <classification>
+        <class class_id="C1" value="diet">
+            <Herbivores id="herb"/>
+            <Carnivores id="carn"/>
+            <Omnivorous id="omni"/>
+        </class>
+
+        <class class_id="C2" value="birth">
+            <Wallets id="wall"/>
+            <Spawning id="spawn"/>
+            <Superior id="supe"/>
+        </class>
+    </classification>
+
+    <contact_details>
+        <address>Zoo Park Main Road, XYZ Town, WZY  COUNTRY, 100-45</address>
+        <tel>+30 210 23643666</tel>
+        <email>xyz@outl.zoopark.com</email>
+    </contact_details>
+
+    <park_timings>
+        <Day day_id="D1">Δευτέρα - Κλειστά</Day>
+        <Day day_id="D2">Τρίτη <Timing>8:00 am – 12:00 pm και 2:00 pm – 5:00 pm</Timing></Day>
+        <Day day_id="D3">Τετάρτη <Timing>8:00 am – 5:00 pm</Timing></Day>
+        <Day day_id="D4">Πέμπτη <Timing>8:00 am – 12:00 pm και 2:00 pm – 5:00 pm</Timing></Day>
+        <Day day_id="D5">Παρασκευή <Timing>8:00 am – 6:00 pm</Timing></Day>
+        <Day day_id="D6">Σάββατο <Timing>8:00 am – 7:30 pm</Timing></Day>
+        <Day day_id="D7">Κυριακή <Timing>8:00 am – 7:30 pm</Timing></Day>
+    </park_timings>
+
+    <tickets>
+        <Weekday_Charges>
+            <wValue ticket_category="adult" unit="euro">50</wValue>
+            <wValue ticket_category="children_3_10" unit="euro">30</wValue>
+            <wValue ticket_category="infants_0_2" unit="euro">Δωρεάν</wValue>
+        </Weekday_Charges>
+
+        <Weekend_Holiday_Charges>
+            <hValue ticket_category="adult" unit="euro">60</hValue>
+            <hValue ticket_category="children_3_10" unit="euro">40</hValue>
+            <hValue ticket_category="infants_0_2" unit="euro">Δωρεάν</hValue>
+        </Weekend_Holiday_Charges>
+    </tickets>
+
+    <animal_list>
+        <animal animal_id="A1" an_class_id="herb supe K5">
+            <animal_names_info animal_name="Άγριο γαϊδούρι της Σομαλίας" scientific_name="Equus asinus somalicus" />
+            <trainers trainer_id="T3 T4"/>
+            <quantity>10</quantity>
+            <animal_descr>Ο αφρικανικός όνος της Σομαλίας (Equus asinus somaliensis) είναι ένα από τα 4 υποείδη αφρικανικού όνου. Ζει στις ερήμους και τις άγονες περιοχές της Σομαλίας, της Αιθιοπίας και της Ερυθραίας. Στην φύση υπάρχουν λιγότερα από 1000 (ή το πολύ 700) άτομα και έχει ταξινομηθεί στα Κρισίμως κινδυνεύοντα (CR) είδη στην Κόκκινη Λίστα των Απειλούμενων Ειδών. Κινδυνεύει κυρίως από το κυνήγι, για το κρέας του και για χρήση στην παραδοσιακή ιατρική. Αυτό το υποείδος ξεχωρίζει από τα άλλα, λόγω των ποδιών του που φέρουν ρίγες σαν της ζέβρας. Τρέφεται κυρίως με φυτά της ερήμου, από χόρτα έως τους αγκαθωτούς θάμνους της ακακίας. Το δυνατό πεπτικό τους σύστημα, τα βοηθάει να παίρνουν επαρκή υγρασία από τις τροφές και έτσι μπορούν να επιβιώσουν χωρίς νερό για αρκετό καιρό. Το υποείδος θεωρείται πρόγονος του κατοικίδιου γαϊδουριού. Ζουν σε βραχώδεις ερήμους, όπου η θερμοκρασία του εδάφους μερικές φορές ξεπερνά τους 50°C. Τα θηλυκά γεννάνε ένα μικρό κάθε 2η χρονιά, μετά από κύηση περίπου 320 ημερών.</animal_descr>
+            <animal_characteristics>
+                <allocation>Σομαλία, Αιθιοπία, Ερυθραία</allocation>
+                <weight unit_weight="kg">280</weight>
+                <habitat>Βραχώδεις έρημοι και άγονες περιοχές</habitat>
+                <dimensions>
+                    <height unit="m" max="true">1.25</height>
+                    <length unit="m" max="true">2.05</length>
+                </dimensions>
+                <lifetime unit="years">30</lifetime>
+                <pregnancy unit="days">365</pregnancy>
+                <population>600</population>
+            </animal_characteristics>
+            <show_participation>
+                <feeding>
+                    <duration unit="minutes">20</duration>
+                    <dates>
+                        <date start_hour="12:00" day_id="D2">Τρίτη</date>
+                        <date start_hour="12:00" day_id="D5">Παρασκευή</date>
+                        <date start_hour="13:00" day_id="D7">Κυριακή</date>
+                    </dates>
+                </feeding>
+            </show_participation>
+            <Threats IUCN="Κρισίμως Κινδυνεύων" indicat_threat="8">
+                <threat threat_id="th1">Κυνήγι για το κρέας του και για χρήση στην παραδοσιακή ιατρική</threat>
+                <threat threat_id="th2">Διασταύρωση με τα οικόσιτα γαϊδούρια</threat>
+                <threat threat_id="th3">Συνεχόμενοι εμφύλιοι πόλεμοι</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A2" an_class_id="herb supe K5">
+            <animal_names_info animal_name="Ασιατικός Ελέφαντας" scientific_name="Elephas maximus" />
+            <trainers trainer_id="T8 T11"/>
+            <quantity>7</quantity>
+            <animal_descr>Ο ασιατικός ελέφαντας (Elephas maximus) είναι παχύδερμο φυτοφάγο θηλαστικό της τάξης των προβοσκιδωτών. Απαντάται στην Ν. και ΝΑ Ασία, από την Ινδία και το Νεπάλ στα δυτικά έως το Βόρνεο στα νότια. Αναγνωρίζονται τρία υποείδη—το E. m. maximus από τη Σρι Λάνκα, το E. m. indicus από την ηπειρωτική Ασία and το E. m. sumatranus από τη νήσο Σουμάτρα. Οι ασιατικοί ελέφαντες είναι το μεγαλύτερο ζώο που ζει στην Ασία. Ο ασιατικός ελέφαντας ζει σε κοπάδια. Συγγενεύει με τον αφρικανικό ελέφαντα, αλλά έχει πιο μικρά αυτιά, πιο άγριο τρίχωμα και πιο κοντούς χαυλιόδοντες. Εξημερώνεται πιο εύκολα από ότι ο αφρικανικός. Στην Ινδία και την Ταϊλάνδη χρησιμοποιείται ως ζώο μεταφοράς κι εργασίας. Είναι κοινωνικό ζώο με μνήμη που διαρκεί πολύ και ζει σε κοπάδια που τα "διοικεί" ένα ηλικιωμένο θηλυκό. Απειλείται από τη λαθροθηρία.</animal_descr>
+            <animal_characteristics>
+                <allocation>Απομονωμένα μέρη του Μπαγκλαντές, Μπουτάν, Ινδία, Μυανμάρ, Νεπάλ, Σρι Λάνκα, Ταϋλάνδη, Καμπότζη, Βιετνάμ, Ν. Κίνα, Λάος, Μαλαισία και Ινδονησία.</allocation>
+                <weight>
+                    <wmale unit_weight="kg">6.000</wmale>
+                    <wfemale unit_weight="kg">4.160</wfemale>
+                </weight>
+                <habitat>Βοσκοτόπια, διάφορα είδη δασών</habitat>
+                <dimensions>
+                    <height unit="m" max="true">3.40</height>
+                    <length unit="m" max="true">6.40</length>
+                </dimensions>
+                <lifetime unit="years">70</lifetime>
+                <pregnancy unit="days">660</pregnancy>
+                <population>50.000</population>
+            </animal_characteristics>
+            <show_participation>
+                <trainer_speaking>
+                    <duration unit="minutes">30</duration>
+                    <dates>
+                        <date start_hour="13:30" day_id="D6">Σάββατο</date>
+                        <date start_hour="13:30" day_id="D7">Κυριακή</date>
+                    </dates>
+                </trainer_speaking>
+            </show_participation>
+            <Threats IUCN="Κινδυνεύων" indicat_threat="7">
+                <threat threat_id="th1">Μείωση, υποβάθμιση και κατακερματισμός του βιότοπού τους (λόγω της εξάπλωσης του ανθρώπινου πληθυσμού, που οδηγεί σε σύγκρουση, προκαλώντας τον θάνατο εκατοντάδων ανθρώπων και ελεφάντων ετησίως)</threat>
+                <threat threat_id="th2">Κυνήγι για το κρέας και το δέρμα τους</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A3" an_class_id="carn spawn K2">
+            <animal_names_info animal_name="Κροκόδειλος του Νείλου" scientific_name="Crocodylus niloticus" />
+            <trainers trainer_id="T10 T11"/>
+            <quantity>2</quantity>
+            <animal_descr>Ο Κροκόδειλος του Νείλου (επιστημονική ονομασία: Crocodylus niloticus - Κροκόδειλος ο νειλοτικός) είναι ένας κροκόδειλος ο οποίος απαντάται στην Αφρική, από την Σενεγάλη μέχρι την Αίγυπτο και την Νότια Αφρική, ενώ έχουν βρεθεί πληθυσμοί και στην Μαδαγασκάρη. Παλιότερα ζούσε και στο Δέλτα του Νείλου, αλλά σήμερα έχει εξαφανιστεί εκεί. Θεωρείται το δεύτερο μεγαλύτερο κροκοδείλιο που ζει σήμερα μετά τον θαλάσσιο κροκόδειλο, με μήκος που μπορεί να φτάσει μέχρι τα 5,5 μέτρα σε πολύ ηλικιωμένα ζώα και βάρος μέχρι 750 κιλά. Ο μεγαλύτερος που έχει μετρηθεί ήταν ένα αρσενικό στην Τανζανία μήκους 6,47 μέτρων and βάρος 1.090 κιλά.</animal_descr>
+            <animal_characteristics>
+                <allocation>Υπό-Σαχάρα Αφρική, Μαδαγασκάρη</allocation>
+                <weight unit_weight="kg">1.000</weight>
+                <habitat>Ποτάμια, βάλτοι γλυκού νερού, εκβολές, μαγκρόβια</habitat>
+                <dimensions>
+                    <length unit="m" max="true">6.00</length>
+                </dimensions>
+                <lifetime unit="years">56</lifetime>
+                <incubation unit="required_but_missing_in_dtd_so_use_unit">90</incubation>
+                <population>500.000</population>
+            </animal_characteristics>
+            <Threats IUCN="Μειωμένου ενδιαφέροντος" indicat_threat="4">
+                <threat threat_id="th1">Θανάτωση λόγω της επικινδυνότητας του ή για το δέρμα του</threat>
+                <threat threat_id="th2">Μείωση του βιοτόπου του</threat>
+                <threat threat_id="th3">Κλιματική αλλαγή</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A4" an_class_id="omni spawn K3">
+            <animal_names_info animal_name="Τουκάνος Τόκο" scientific_name="Rampastos toco" />
+            <trainers trainer_id="T5 T12 T3"/>
+            <quantity>3</quantity>
+            <animal_descr>Ο τουκάνος τόκο έχει ένα μεγάλο ράμφος, που το χρησιμοποιεί για να παίρνει εύκολα τα φρούτα από τα κλαδιά των δέντρων. Ζει κοντά στους ποταμούς και στα δάση. Η εκκόλαψη των αυγών γίνεται και από το αρσενικό και από το θηλυκό.</animal_descr>
+            <animal_characteristics>
+                <allocation>Νότια Αμερική: Αργεντινή, Βολιβία, Βραζιλία, Γαλλική Γουιάνα, Γουιάνα, Παραγουάη, Περού, Σουρινάμ.</allocation>
+                <weight unit_weight="gr">860</weight>
+                <habitat>Το μόνο είδος τουκάνου που δεν ζει σε δάση. Παραποτάμιες και παραθαλάσειες παρυφές δασών, σαβάνες, φυτείες.</habitat>
+                <dimensions>
+                    <length unit="m" max="true">0.61</length>
+                </dimensions>
+                <lifetime unit="years">26</lifetime>
+                <incubation unit="required_but_missing_in_dtd_so_use_unit">18</incubation>
+                <population>100.000</population>
+            </animal_characteristics>
+            <show_participation>
+                <show_bird_flight>
+                    <duration unit="minutes">25</duration>
+                    <dates>
+                        <date start_hour="11:00" day_id="D5">Παρασκευή</date>
+                        <date start_hour="11:25" day_id="D3">Τετάρτη</date>
+                        <date start_hour="11:10" day_id="D7">Κυριακή</date>
+                    </dates>
+                </show_bird_flight>
+            </show_participation>
+            <Threats IUCN="Μειωμένου ενδιαφέρονοτος" indicat_threat="4">
+                <threat threat_id="th1">Κυνήγι</threat>
+                <threat threat_id="th2">Παγίδευση μικρών ως κατοικίδια</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A5" an_class_id="carn supe K5">
+            <animal_names_info animal_name="Ρινοδέλφινο" scientific_name="Tursiops truncatus" />
+            <trainers trainer_id="T2 T6 T10 T11"/>
+            <quantity>11</quantity>
+            <animal_descr>Το ρινοδέλφινο (επιστημονική ονομασία Tursiops truncatus) είναι είδος θηλαστικών κητοειδών της οικογένειας των δελφινιδών που απαντά και στον ελλαδικό χώρο. Το ρινοδέλφινο δεν περιλαμβάνει υποείδη. Το μέγεθός του ρινοδέλφινου είναι 2 με 4 μέτρα (το ανώτερο) και έχει βάρος 270-350 χιλιόγραμμα. Το χρώμα του σώματός του είναι σκούρο γκρι στην ράχη με λιγότερο σκούρα ή άσπρη-ροζ κοιλιά. Στις Ελληνικές θάλασσες τα Ρινοδέλφινα μπορούμε να διακρίνουμε μια ανοιχτόχρωμη «πινελιά» κάτω από ραχιαίο πτερύγιο. Εκτός από το μεγάλο του μέγεθος έχει πολύ καμπυλομένη ράχη όταν ξενερίζει. (Βγάζει το νερό από την τρύπα που έχει στη ράχη το σώματός του). Έχει 20-25 δόντια σε κάθε σιαγόνα. Ζει σε όλους του ωκεανούς (πλην των Αρκτικών) και σε όλη την Μεσόγειο, την Αδριατική και τα νησιά του Ιονίου και του Αιγαίου. Επίσης μεγάλοι πληθυσμοί παρατηρούνται και στον Αμβρακικό, στον Βόρειο Ευβοϊκό, στον Σιγγιτικό, στον Σαρωνικό, στον Κορινθιακό και στη θαλάσσια περιοχή ανάμεσα στην Λευκάδα και την Αιτωλοακαρνανία. Κολυμπά με ταχύτητες φτάνουν τα 35 χιλιόμετρα την ώρα. Πολύ συχνά το βλέπουμε να παίζει με το κύμα της πλώρης ή με τα απόνερα ενός σκάφους. Βουτά για 3 με 4 λεπτά και τρέφεται με γαύρο, σαρδέλα, σκουμπριά, κέφαλους, σουπιές και καλαμάρια. Μερικές φορές συνεργάζεται με τους ψαράδες αλλά πιο συχνά τους δημιουργεί προβλήματα και ζημιές κλέβοντας ψάρια από τα δίκτυα. Είναι φιλικό με τον άνθρωπο και συχνά πλησιάζει και παίζει με τους κολυμβητές. Ζει μέχρι και σαράντα έξι χρόνια. Οι κύριες απειλές του είναι η μείωση τροφής, η απευθείας θανάτωση, η παρεμπίπτουσα αλιεία με παραδοσιακά μέσα, ο θόρυβος, η θαλάσσια ρύπανση, η τυχαία σύλληψη σε αλιευτικά εργαλεία (δίχτυα) και η υπεραλίευση.</animal_descr>
+            <animal_characteristics>
+                <allocation>Παγκόσμια εξάπλωση</allocation>
+                <weight unit_weight="kg">650</weight>
+                <habitat>Κυρίως σε παράκτιες περιοχές αλλά και σε πελάγη</habitat>
+                <dimensions>
+                    <length unit="m" max="true">4.1</length>
+                </dimensions>
+                <lifetime unit="years">35</lifetime>
+                <pregnancy unit="months">12</pregnancy>
+                <population>600.000</population>
+            </animal_characteristics>
+            <show_participation>
+                <animal_show>
+                    <duration unit="minutes">35</duration>
+                    <dates>
+                        <date start_hour="12:00" day_id="D5">Παρασκευή</date>
+                        <date start_hour="12:25" day_id="D6">Σάββατο</date>
+                        <date start_hour="12:25" day_id="D7">Κυριακή</date>
+                    </dates>
+                </animal_show>
+            </show_participation>
+            <Threats IUCN="Μειωμένου ενδιαφέρονοτος" indicat_threat="3">
+                <threat threat_id="th1">Η αλλοίωση του φυσικού τους περιβάλλοντος</threat>
+                <threat threat_id="th2">Η αντιπαράθεση με τους ψαράδες</threat>
+                <threat threat_id="th3">Η ρύπανση της θάλασσας</threat>
+                <threat threat_id="th4">Η θανάτωσή τους (for τροφή ή δολώματα σε ορισμένες περιοχές)</threat>
+                <threat threat_id="th5">Οι ιογενείς επιδημίες</threat>
+                <threat threat_id="th6">Η μεγάλη έκθεση σε τοξίνες, η εμπλοκή σε δίχτυα και η σύγκρουση με πλοία</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A6" an_class_id="herb supe K5">
+            <animal_names_info animal_name="Ζέβρα του Γκράντ" scientific_name="Equus quagga bοehmi" />
+            <trainers trainer_id="T3 T4"/>
+            <quantity>6</quantity>
+            <animal_descr>Η Ζέβρα του Γκράντ (Equus quagga boehmi) είναι το μικρότερο από τα επτά υποείδη της ζέβρας. Απαντά στην Υποσαχάρια Αφρική.</animal_descr>
+            <animal_characteristics>
+                <allocation>Ζάμπια, Λ.Δ. Κονγκό, Τανζανία, Κένυα, Αιθιοπία, Σομαλία</allocation>
+                <weight unit_weight="kg">320</weight>
+                <habitat>Σαβάνα</habitat>
+                <dimensions>
+                    <height unit="m" max="true">1.40</height>
+                    <length unit="m" max="true">2.46</length>
+                </dimensions>
+                <lifetime unit="years">25</lifetime>
+                <pregnancy unit="months">12</pregnancy>
+                <population>300.000</population>
+            </animal_characteristics>
+            <Threats IUCN="Σχεδόν απειλούμενο" indicat_threat="6">
+                <threat threat_id="th1">Εμφύλιοι πόλεμοι</threat>
+                <threat threat_id="th2">Παράνομο κυνήγι</threat>
+                <threat threat_id="th3">Καταστροφή του φυσικού τους περιβάλλοντος</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A7" an_class_id="omni supe K5">
+            <animal_names_info animal_name="Χιμπατζής" scientific_name="Pan troglodytes" />
+            <trainers trainer_id="T1"/>
+            <quantity>38</quantity>
+            <animal_descr>Χιμπαντζής είναι η κοινή ονομασία των δύο ειδών του γένους Παν (Pan) που δεν έχουν εκλείψει. Ονοματολογία: χιμπαντζής &lt; αγγλική chimpanzee &lt; ci-mpenzi (λέξη μιας αταξινόμητης διαλέκτου της γλώσσας Μπαντού στην Αγκόλα). Οι χιμπαντζήδες είναι μέλη της οικογένειας των Ανθρωπίδων μαζί με τους γορίλες, τους ανθρώπους και τους ουρακοτάγκους. Η εξελικτική πορεία των χιμπαντζήδων διαχωρίστηκε από την ανθρώπινη εξέληξη περίπου 6 εκατομμύρια χρόνια πριν. Τα δύο είδη των χιμπαντζήδων είναι οι στενότεροι συγγενείς του ανθρώπου, και ανήκουν μαζί με τον άνθρωπο στο φύλο Ανθρωπίνοι (μαζί με τα είδη του υποφύλου Ανθρωπίνια που έχουν εκλείψει). Οι Χιμπαντζήδες είναι τα μόνα γνωστά μέλη του γένους Pan. Τα δύο είδη διαχωρίστηκαν μεταξύ τους περίπου ένα εκατομμύριο χρόνια πριν. Οι τρεις μεγαλύτερες απειλές για τον χιμπατζή είναι ο άνθρωπος, τα αιλουροειδή και τα φίδια. Οι χιμπατζήδες απειλούνται εξαιτίας της καταστροφής του βιότοπού τους, του κυνηγιού για το κρέας τους και του εμπορίου κατοικίδιων ζώων. Η υπηρεσία Ψαριών και άγριας ζωής των ΗΠΑ εφαρμόζει ένα νόμο από τις 12 Ιουνίου του 2015, δημιουργώντας πολύ αυστηρούς κανονισμούς, σχεδόν φραγής κάθε δραστηριότητας με τους χιμπατζήδες, εκτός αν πρόκειται για επιστημονικούς ή λόγους συντήρησης, αφού θεωρεί το είδος απειλούμενο.</animal_descr>
+            <animal_characteristics>
+                <allocation>Σε 21 χώρες της δυτικής και κεντρικής Αφρικής</allocation>
+                <weight>
+                    <wmale unit_weight="kg">70</wmale>
+                    <wfemale unit_weight="kg">50</wfemale>
+                </weight>
+                <habitat>Τροπικά δάση, δασώδη σαβάνα</habitat>
+                <dimensions>
+                    <height unit="m" max="true" male="true">0.96 <female f_unit_height="m" max="true">0.91</female></height>
+                </dimensions>
+                <lifetime unit="years">50</lifetime>
+                <pregnancy unit="days">230</pregnancy>
+                <population>299.700</population>
+            </animal_characteristics>
+            <show_participation>
+                <feeding>
+                    <duration unit="minutes">40</duration>
+                    <dates>
+                        <date start_hour="14:00" day_id="D4">Πέμπτη</date>
+                        <date start_hour="14:00" day_id="D5">Παρασκευή</date>
+                        <date start_hour="14:00" day_id="D6">Σάββατο</date>
+                    </dates>
+                </feeding>
+            </show_participation>
+            <Threats IUCN="Κινδυνεύων" indicat_threat="6">
+                <threat threat_id="th1">Καταστροφή και υποβάθμιση του βιότοπού τους (αγροτικές καλλιέργειες, υλοτομία, εξόρυξη)</threat>
+                <threat threat_id="th2">Θανάτωση (for το κρέας τους, ιατρικούς σκοπούς, παγίδες, προστασία καλλιεργειών)</threat>
+                <threat threat_id="th3">Ανθρώπινες ασθένειες</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A8" an_class_id="herb supe K5">
+            <animal_names_info animal_name="Καμηλοπάρδαλη" scientific_name="Giraffa camelopardalis" />
+            <trainers trainer_id="T4"/>
+            <quantity>7</quantity>
+            <animal_descr>Η καμηλοπάρδαλη είναι το ψηλότερο ζώο στον κόσμο. Ανήκει στην τάξη των Аρτιοδάκτυλων, στο οποίο ανήκει ένα μόνο είδος, η Καμηλοπάρδαλη η καμηλοπάρδαλις (Giraffa camelopardalis) είναι επίσης γνωστή ως Καμηλοπάρδαλις η κοινή. Το εν λόγω είδος έχει αρκετές ποικιλίες και ζει σε αγέλες θηλυκών με τα μικρά τους, τα οποία έχουν ένα αρσενικό για αρχηγό. Τρέφεται με φύλλα και βλαστούς ψηλών δέντρων που είναι απρόσιτα στα άλλα ζώα. Όταν θέλει να πάρει κάτι από το έδαφος ή να πιει νερό ανοίγει τα μπροστινά πόδια της ή γονατίζει λυγίζοντας τα. Ωστόσο, η καμηλοπάρδαλη δεν πίνει συχνά νερό διότι, λόγω ύψους, είναι αναγκασμένη να ακολουθήσει ολόκληρη διαδικασία για να σκύψει, οπότε εκείνη τη στιγμή γίνεται πολύ ευάλωτη στους εχθρούς της. Η καμηλοπάρδαλη έχει 9 υποείδη. Κάποια εκ των οποίων είναι η νότια καμηλοπάρδαλη, η Καμηλοπάρδαλη Μασάι, η Καμηλοπάρδαλη του Ρότσιλντ η Καμηλοπάρδαλη της Ροδεσίας, της Αγκόλας,της Δυτικής Αφρικής, και η δικτυωτή καμηλοπάρδαλη.</animal_descr>
+            <animal_characteristics>
+                <allocation>Διάσπαρτα κατανεμημένο στην υποσαχάρια Αφρική</allocation>
+                <weight>
+                    <wmale unit_weight="kg">1.930</wmale>
+                    <wfemale unit_weight="kg">1.180</wfemale>
+                </weight>
+                <habitat>Σαβάνα</habitat>
+                <dimensions>
+                    <height unit="m" max="true">5.90</height>
+                </dimensions>
+                <lifetime unit="years">25</lifetime>
+                <pregnancy unit="months">15</pregnancy>
+                <population>97.560</population>
+            </animal_characteristics>
+            <show_participation>
+                <trainer_speaking>
+                    <duration unit="minutes">20</duration>
+                    <dates>
+                        <date start_hour="10:20" day_id="D6">Σάββατο</date>
+                        <date start_hour="11:05" day_id="D7">Κυριακή</date>
+                    </dates>
+                </trainer_speaking>
+            </show_participation>
+            <Threats IUCN="Τρωτό" indicat_threat="9">
+                <threat threat_id="th1">Καταστρογή του φυσικού τους περιβάλλοντος</threat>
+                <threat threat_id="th2">Παράνομο κυνήγι</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A9" an_class_id="omni spaw K3">
+            <animal_names_info animal_name="Ασημένιος Φασιανός" scientific_name="Lophura nyctherema" />
+            <trainers trainer_id="T9 T10"/>
+            <quantity>4</quantity>
+            <animal_descr>Ο Φασιανός (Phasianus) είναι γένος πτηνών, που ανήκει στην οικογένεια Φασιανίδες και στην τάξη Ορνιθόμορφα. Υπάρχουν περίπου 25 είδη, με καταγωγή από την Ασία. Σήμερα, με την ανθρώπινη παρέμβαση, το πτηνό έχει εξαπλωθεί σε όλο τον κόσμο. Εκτρέφεται σε ειδικά εκτροφεία, στα οποία ζει σε ημιάγρια κατάσταση, σε περιφραγμένες περιοχές με θάμνους.</animal_descr>
+            <animal_characteristics>
+                <allocation>Καμπότζη, Κίνα, Λάος, Μυανμάρ, Ταϋλάνδη, Βιετνάμ.</allocation>
+                <weight>
+                    <wmale unit_weight="kg">2</wmale>
+                    <wfemale unit_weight="kg">1.3</wfemale>
+                </weight>
+                <habitat>Ορεινά δάση, λιβάδια</habitat>
+                <dimensions>
+                    <height unit="m" max="true" male="true">1.25 <female f_unit_height="m" max="true">0.71</female></height>
+                </dimensions>
+                <lifetime unit="years">10</lifetime>
+                <incubation unit="required_but_missing_in_dtd_so_use_unit">26</incubation>
+                <population>Δεν διατίθεται</population>
+            </animal_characteristics>
+            <show_participation>
+                <trainer_speaking>
+                    <duration unit="minutes">25</duration>
+                    <dates>
+                        <date start_hour="11:00" day_id="D6">Σάββατο</date>
+                        <date start_hour="11:00" day_id="D7">Κυριακή</date>
+                    </dates>
+                </trainer_speaking>
+            </show_participation>
+            <Threats IUCN="Μειωμένου ενδιαφέροντος" indicat_threat="3">
+                <threat threat_id="th1">Συνεχόμενη καταστροφή βιοτόπου</threat>
+                <threat threat_id="th2">Εκτεταμένο κυνήγι</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A10" an_class_id="omni supe K5">
+            <animal_names_info animal_name="Καφέ αρκούδα" scientific_name="Ursus arctos arctos" />
+            <trainers trainer_id="T2"/>
+            <quantity>2</quantity>
+            <animal_descr>Η καφέ αρκούδα ή φαιά αρκούδα ή κοινή αρκούδα (Άρκτος η άρκτος-Ursus arctos) είναι παμφάγο θηλαστικό ζώο και το είδος αρκούδας (ίσως το γνωστότερο) με τη μεγαλύτερη γεωγραφική εξάπλωση, που μπορεί να φτάσει σε μάζα από 170 μέχρι 300 κιλά. Υποείδος της είναι η Αρκούδα γκρίζλι, διάσημη στις Ηνωμένες Πολιτείες. Στην Ελλάδα, η καφέ αρκούδα υπάρχει κυρίως στη δυτική και βορειοδυτική Ελλάδα, ωστόσο ο πληθυσμός της είναι περιορισμένος. Έχει οξεία όσφρηση και ακοή, και πολύ καλή όραση.</animal_descr>
+            <animal_characteristics>
+                <allocation>Ευρώπη και Δ. Ρωσία</allocation>
+                <weight unit_weight="kg">265</weight>
+                <habitat>Ορεινές δασώδεις περιοχές</habitat>
+                <dimensions>
+                    <height unit="m" max="true">1.10</height>
+                    <length unit="m" max="true">2.50</length>
+                </dimensions>
+                <lifetime unit="years">30</lifetime>
+                <pregnancy unit="months">9</pregnancy>
+                <population>17.000</population>
+            </animal_characteristics>
+            <Threats IUCN="Μειωμένου Ενδιαφέροντος" indicat_threat="3">
+                <threat threat_id="th1">Κατακερματισμός κι απώλεια του βιότοπο τους</threat>
+                <threat threat_id="th2">Tροχαία ατυχήματα</threat>
+                <threat threat_id="th3">Λαθροθηρία και δηλητηριασμένα δολώματα</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A11" an_class_id="herb supe K5">
+            <animal_names_info animal_name="Αντιλόπη του Νερού" scientific_name="Kobus leche kafuensis" />
+            <trainers trainer_id="T4 T10"/>
+            <quantity>5</quantity>
+            <animal_descr>Η υδρόβια αντιλόπη είναι φυτοφάγο θηλαστικό της οικογένειας των Βοοειδών. Το είδος έχει την επιστημονική ονομασία Kobus ellipsiprymnus, απαντά νότια της Σαχάρας, στην κεντρική και ανατολική Αφρική και περιλαμβάνει 13 υποείδη.</animal_descr>
+            <animal_characteristics>
+                <allocation>Πεδιάδες Κάφουε στην κεντρική Ζάμπια</allocation>
+                <weight>
+                    <wmale unit_weight="kg">135</wmale>
+                    <wfemale unit_weight="kg">89</wfemale>
+                </weight>
+                <habitat>Ανοιχτές και πλημμυρικές πεδιάδες</habitat>
+                <dimensions>
+                    <height unit="m" max="true">1.12</height>
+                    <length unit="m" max="true">1.75</length>
+                </dimensions>
+                <lifetime unit="years">15</lifetime>
+                <pregnancy unit="months">8</pregnancy>
+                <population>20.000</population>
+            </animal_characteristics>
+            <show_participation>
+                <trainer_speaking>
+                    <duration unit="minutes">25</duration>
+                    <dates>
+                        <date start_hour="11:00" day_id="D6">Σάββατο</date>
+                        <date start_hour="11:00" day_id="D7">Κυριακή</date>
+                    </dates>
+                </trainer_speaking>
+            </show_participation>
+            <Threats IUCN="Απειλούμενο" indicat_threat="7">
+                <threat threat_id="th1">Ανταγωνισμός στη βοσκή με τα οικόσιτα βοοειδή</threat>
+                <threat threat_id="th2">Παράνομο κυνήγι και καταστροφή των βιοτόπων</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A12" an_class_id="omni supe K5">
+            <animal_names_info animal_name="Αλεπού Φέννεκ" scientific_name="Vulpes zerda" />
+            <trainers trainer_id="T1 T7"/>
+            <quantity>8</quantity>
+            <animal_descr>Το φενέκ είναι σαρκοφάγο θηλαστικό της οικογένειας των κυνιδών, το οποίο κατέχει τον «τίτλο» της μικρότερης αλεπούς στη φύση. Το είδος έχει την επιστημονική ονομασία Vulpes zerda, δεν περιλαμβάνει υποείδη (μονοτυπικό taxon) and απαντά αποκλειστικά στη Β. και ΒΚ. Αφρική. Το φενέκ είναι όχι μόνον η μικρότερη αλεπού στον κόσμο, αλλά και το μικρότερο σε μέγεθος μέλος της οικογενείας Κυνίδες, όπου ανήκει. Είναι προσαρμοσμένο να ζει στα αφιλόξενα ερημικά και ημιερημικά ενδιαιτήματα των περιοχών εξάπλωσής του, έχοντας αναπτύξει ιδιαίτερα δομικά και φυσιολογικά χαρακτηριστικά που τού επιτρέπουν να αντέχει σε συνθήκες ξηρασίας και σε μεγάλες θερμοκρασιακές διαφορές</animal_descr>
+            <animal_characteristics>
+                <allocation>Β. Αφρική έως Β. Σινά</allocation>
+                <weight unit_weight="kg">1.87</weight>
+                <habitat>Έρημος, σταθερές αμμοθίνες</habitat>
+                <dimensions>
+                    <height unit="m" max="true">39.5</height>
+                </dimensions>
+                <lifetime unit="years">10</lifetime>
+                <pregnancy unit="days">52</pregnancy>
+                <population>Κοινό</population>
+            </animal_characteristics>
+            <Threats IUCN="Μειωμένου ενδιαφέροντος" indicat_threat="3">
+                <threat threat_id="th1">Παγίδευση για εμπορική χρήση (φωτογραφίσεις, πώληση για το εμπόριο κατοικίδιων ή σε τουρίστες, θανάτωση για τη γούνα τους από τους ντόπιους)</threat>
+                <threat threat_id="th2">Καταπάτηση του βιότοπού τους λόγω οικιστικής εξάπλωσης που οδηγεί στην εξαφάνισή τους από μερικές περιοχές.</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A13" an_class_id="herb spawn K3">
+            <animal_names_info animal_name="Αυτοκρατορική Φρουτόφασσα" scientific_name="Ducula aenea" />
+            <trainers trainer_id="T5 T3"/>
+            <quantity>13</quantity>
+            <animal_descr>Αναζητούν τροφή στα ψηλότερα μέρη του δάσους, κόβοντας μικρά και μεγάλα φρούτα από τα κλαδιά. Μπορεί να κατέβουν στο έδαφος, πρώτα για να πιούν νερό και ύστερα για να γλείψουν αλάτι από το έδαφος.</animal_descr>
+            <animal_characteristics>
+                <allocation>Νότια Ασία από Ινδία ανατολικά ως Ινδονησία.</allocation>
+                <weight unit_weight="gr">644</weight>
+                <habitat>Το μόνο είδος τουκάνου που δεν ζει σε δάση. Παραποτάμιες και παραθαλάσσιες παρυφές δασών, σαβάνες, φυτείες.</habitat>
+                <dimensions>
+                    <length unit="m" max="true">0.47</length>
+                </dimensions>
+                <lifetime unit="years">24</lifetime>
+                <incubation unit="required_but_missing_in_dtd_so_use_unit">19</incubation>
+                <population>Διαδεδομένο και κοινό</population>
+            </animal_characteristics>
+            <show_participation>
+                <show_bird_flight>
+                    <duration unit="minutes">15</duration>
+                    <dates>
+                        <date start_hour="12:00" day_id="D5">Παρασκευή</date>
+                        <date start_hour="12:10" day_id="D7">Κυριακή</date>
+                    </dates>
+                </show_bird_flight>
+            </show_participation>
+            <Threats IUCN="Μειωμένου ενδιαφέρονοτος" indicat_threat="4">
+                <threat threat_id="th1">Καταστροφή και κατακερματισμός του βιότοπού του.</threat>
+            </Threats>
+        </animal>
+
+        <animal animal_id="A14" an_class_id="carn spawn K5">
+            <animal_names_info animal_name="Δράκος του Κόμοντο" scientific_name="Varanus komodoensis" />
+            <trainers trainer_id="T9"/>
+            <quantity>3</quantity>
+            <animal_descr>Ο δράκος του Κόμοντο είναι το μεγαλύτερο είδος σαύρας στον κόσμο. Ζει στα ηφαιστειογενή νησιά της Ινδονησίας και είναι κορυφαίος κυνηγός στο οικοσύστημά του.</animal_descr>
+            <animal_characteristics>
+                <allocation>Ηφαιστειογενή νησιά Κόμοντο, Ρίνκα, Γκίλι Μοτάνγκ και Φλόρες της Ινδονησίας.</allocation>
+                <weight>
+                    <wmale unit_weight="kg">90</wmale>
+                    <wfemale unit_weight="kg">70</wfemale>
+                </weight>
+                <habitat>Tροπικά δάση μουσώνων, σαβάνες με φοίνικες και λιβάδια.</habitat>
+                <dimensions>
+                    <length unit="m" max="true" male="true">3 <female f_unit_length="m" max="true">2</female></length>
+                </dimensions>
+                <lifetime unit="years">50</lifetime>
+                <incubation unit="required_but_missing_in_dtd_so_use_unit">8</incubation>
+                <population>5.000</population>
+            </animal_characteristics>
+            <show_participation>
+                <feeding>
+                    <duration unit="minutes">30</duration>
+                    <dates>
+                        <date start_hour="13:00" day_id="D4">Πέμπτη</date>
+                        <date start_hour="14:00" day_id="D6">Σάββατο</date>
+                    </dates>
+                </feeding>
+            </show_participation>
+            <Threats IUCN="Τρωτό" indicat_threat="9">
+                <threat threat_id="th1">Καταστροφή του φυσικού του περιβάλλοντος</threat>
+                <threat threat_id="th2">Μείωση των θηραμάτων</threat>
+                <threat threat_id="th3">Κυνήγι και καταδίωξη</threat>
+                <threat threat_id="th4">Φωτιές.</threat>
+            </Threats>
+        </animal>
+    </animal_list>
+</zoo_park>

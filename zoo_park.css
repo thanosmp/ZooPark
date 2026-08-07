@@ -1,0 +1,424 @@
+/* Γενική εμφάνιση σελίδας */
+zoo_park {
+  display: block;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f8f4;
+  color: #263238;
+}
+
+/* Τίτλος ζωολογικού πάρκου */
+zoo_park::before {
+  content: attr(name);
+  display: block;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #1b5e20;
+  background-color: #ffffff;
+  border: 3px solid #2e7d32;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 15px;
+}
+
+/* Απόκρυψη βοηθητικών λιστών */
+trainer_list,
+animal_classification,
+classification,
+park_timings,
+tickets {
+  display: none;
+}
+
+/* Στοιχεία επικοινωνίας */
+contact_details {
+  display: block;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #c8e6c9;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 25px;
+  color: #455a64;
+}
+
+address,
+tel,
+email {
+  display: inline;
+}
+
+address::before {
+  content: "Διεύθυνση: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+tel::before {
+  content: "Τηλέφωνο: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+email::before {
+  content: "Email: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+address::after,
+tel::after {
+  content: " | ";
+}
+
+/* Λίστα ζώων */
+animal_list {
+  display: block;
+}
+
+/* Κάρτα ζώου */
+animal {
+  display: block;
+  background-color: #ffffff;
+  border: 2px solid #81c784;
+  border-left: 8px solid #2e7d32;
+  border-radius: 14px;
+  padding: 22px;
+  margin: 24px 0;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+}
+
+/* Κωδικοί ζώου */
+animal::before {
+  content: "Κωδικός ζώου: " attr(animal_id) " | Κατηγορίες: " attr(an_class_id);
+  display: block;
+  font-size: 13px;
+  color: #607d8b;
+  margin-bottom: 8px;
+}
+
+/* Όνομα και επιστημονική ονομασία */
+animal_names_info {
+  display: block;
+  margin-bottom: 12px;
+}
+
+animal_names_info::before {
+  content: attr(animal_name);
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+animal_names_info::after {
+  content: "Επιστημονική ονομασία: " attr(scientific_name);
+  display: block;
+  font-style: italic;
+  color: #607d8b;
+  margin-top: 4px;
+}
+
+/* Φροντιστές */
+trainers {
+  display: block;
+  margin: 8px 0;
+}
+
+trainers::before {
+  content: "Φροντιστές: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+trainers::after {
+  content: attr(trainer_id);
+}
+
+/* Πλήθος */
+quantity {
+  display: block;
+  margin: 8px 0;
+}
+
+quantity::before {
+  content: "Πλήθος: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+/* Περιγραφή */
+animal_descr {
+  display: block;
+  line-height: 1.5;
+  margin: 12px 0;
+  text-align: justify;
+}
+
+animal_descr::before {
+  content: "Περιγραφή";
+  display: block;
+  font-weight: bold;
+  color: #1565c0;
+  margin-bottom: 5px;
+}
+
+/* Χαρακτηριστικά ζώου */
+animal_characteristics {
+  display: block;
+  background-color: #f1f8e9;
+  border-left: 5px solid #689f38;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+animal_characteristics::before {
+  content: "Χαρακτηριστικά";
+  display: block;
+  font-weight: bold;
+  color: #33691e;
+  margin-bottom: 8px;
+}
+
+allocation,
+weight,
+wmale,
+wfemale,
+habitat,
+dimensions,
+height,
+length,
+female,
+lifetime,
+pregnancy,
+incubation,
+population {
+  display: block;
+  margin: 4px 0;
+}
+
+allocation::before {
+  content: "Κατανομή: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+weight::before {
+  content: "Βάρος: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+weight::after {
+  content: " " attr(unit_weight);
+}
+
+wmale::before {
+  content: "Βάρος αρσενικού: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+wmale::after {
+  content: " " attr(unit_weight);
+}
+
+wfemale::before {
+  content: "Βάρος θηλυκού: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+wfemale::after {
+  content: " " attr(unit_weight);
+}
+
+habitat::before {
+  content: "Βιότοπος: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+dimensions::before {
+  content: "Διαστάσεις";
+  display: block;
+  font-weight: bold;
+  color: #1565c0;
+  margin-top: 4px;
+}
+
+height::before {
+  content: "Ύψος: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+height::after {
+  content: " " attr(unit);
+}
+
+length::before {
+  content: "Μήκος: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+length::after {
+  content: " " attr(unit);
+}
+
+female::before {
+  content: "Θηλυκό: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+female::after {
+  content: " " attr(f_unit_height) attr(f_unit_length);
+}
+
+lifetime::before {
+  content: "Διάρκεια ζωής: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+lifetime::after {
+  content: " " attr(unit);
+}
+
+pregnancy::before {
+  content: "Κυοφορία: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+pregnancy::after {
+  content: " " attr(unit);
+}
+
+incubation::before {
+  content: "Επώαση: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+incubation::after {
+  content: " " attr(unit);
+}
+
+population::before {
+  content: "Πληθυσμός: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+/* Δραστηριότητες */
+show_participation {
+  display: block;
+  background-color: #fff8e1;
+  border-left: 5px solid #f9a825;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+show_participation::before {
+  content: "Δραστηριότητες";
+  display: block;
+  font-weight: bold;
+  color: #e65100;
+  margin-bottom: 8px;
+}
+
+feeding,
+trainer_speaking,
+animal_show,
+show_bird_flight,
+duration,
+dates,
+date {
+  display: block;
+  margin: 4px 0;
+}
+
+feeding::before {
+  content: "Τάισμα";
+  display: block;
+  font-weight: bold;
+  color: #ef6c00;
+}
+
+trainer_speaking::before {
+  content: "Ομιλία φροντιστή";
+  display: block;
+  font-weight: bold;
+  color: #ef6c00;
+}
+
+animal_show::before {
+  content: "Επίδειξη ζώου";
+  display: block;
+  font-weight: bold;
+  color: #ef6c00;
+}
+
+show_bird_flight::before {
+  content: "Επίδειξη πτήσης";
+  display: block;
+  font-weight: bold;
+  color: #ef6c00;
+}
+
+duration::before {
+  content: "Διάρκεια: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+duration::after {
+  content: " " attr(unit);
+}
+
+date::before {
+  content: "Ημέρα: ";
+  font-weight: bold;
+  color: #1565c0;
+}
+
+date::after {
+  content: " | Ώρα έναρξης: " attr(start_hour);
+}
+
+/* Απειλές */
+Threats {
+  display: block;
+  background-color: #ffebee;
+  border-left: 5px solid #c62828;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+Threats::before {
+  content: "Απειλές - IUCN: " attr(IUCN) " | Δείκτης: " attr(indicat_threat);
+  display: block;
+  font-weight: bold;
+  color: #b71c1c;
+  margin-bottom: 8px;
+}
+
+threat {
+  display: block;
+  margin: 4px 0;
+}
+
+threat::before {
+  content: "• ";
+  color: #b71c1c;
+  font-weight: bold;
+}
